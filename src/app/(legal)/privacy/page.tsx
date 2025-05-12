@@ -48,7 +48,7 @@ export default function PrivacyPage() {
         <p className="text-muted-foreground">
           If you have any questions about this Privacy Policy, please contact us at:
           <br />
-          Email: privacy@example.com
+          Email: supporttools@pandev00.com
         </p>
       </section>
 
