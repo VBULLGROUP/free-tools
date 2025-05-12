@@ -21,9 +21,9 @@ export const metadata: Metadata = {
   },
   description: SITE_DESCRIPTION,
   metadataBase: new URL(SITE_URL),
-  keywords: ["SaaS", "Next.js", "React", "TypeScript", "Cloudflare Workers", "Edge Computing"],
-  authors: [{ name: "Lubomir Georgiev" }],
-  creator: "Lubomir Georgiev",
+  keywords: ["Free Tools", "Next.js", "React", "TypeScript", "Cloudflare Workers", "Edge Computing"],
+  authors: [{ name: "pandev00" }],
+  creator: "pandev00",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: SITE_NAME,
     description: SITE_DESCRIPTION,
-    creator: "@LubomirGeorg",
+    creator: "@pandev00",
   },
   robots: {
     index: true,
