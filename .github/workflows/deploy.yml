@@ -49,6 +49,9 @@ jobs:
       - name: Migrate local D1 database
         run: pnpm run db:migrate:dev
 
+      - name: Generate Worker types
+        run: pnpm wrangler types
+
       - name: Deploy
         run: pnpm run deploy
         env:
