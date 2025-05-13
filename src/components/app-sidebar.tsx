@@ -124,10 +124,6 @@ const data: Data = {
           title: "Sessions",
           url: "/settings/sessions",
         },
-        {
-          title: "Change Password",
-          url: "/forgot-password",
-        },
       ],
     },
   ],

@@ -13,7 +13,7 @@ const features = [
   {
     name: "Authentication Ready",
     description:
-      "Complete authentication system with email/password sign in, sign up, forgot password flow, and session management using Lucia Auth.",
+      "Complete authentication system with email/password sign in, sign up flow, and session management using Lucia Auth.",
     icon: ShieldCheckIcon,
   },
   {

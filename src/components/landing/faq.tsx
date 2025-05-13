@@ -21,7 +21,7 @@ const faqs = [
       <>
         The template includes a comprehensive set of features:
         <ul className="list-disc pl-6 mt-2 space-y-1">
-          <li>Authentication with email/password and forgot password flow</li>
+          <li>Authentication with email/password flow</li>
           <li>Database integration with Drizzle ORM and Cloudflare D1</li>
           <li>Email service powered by React Email and Resend</li>
           <li>Modern UI components from Shadcn UI and Tailwind CSS</li>

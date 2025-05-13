@@ -10,7 +10,7 @@ import { eq } from "drizzle-orm";
 import { createId } from "@paralleldrive/cuid2";
 import { getCloudflareContext } from "@opennextjs/cloudflare";
 import { getVerificationTokenKey } from "@/utils/auth-utils";
-import { sendVerificationEmail } from "@/utils/email";
+// import { sendVerificationEmail } from "@/utils/email";
 import { withRateLimit, RATE_LIMITS } from "@/utils/with-rate-limit";
 import { EMAIL_VERIFICATION_TOKEN_EXPIRATION_SECONDS } from "@/constants";
 import { getIP } from "@/utils/get-IP";
@@ -104,12 +104,12 @@ export const signUpAction = createServerAction()
             }
           );
 
-          // Send verification email
-          await sendVerificationEmail({
-            email: user.email,
-            verificationToken,
-            username: user.firstName || user.email,
-          });
+          // // Send verification email
+          // await sendVerificationEmail({
+          //   email: user.email,
+          //   verificationToken,
+          //   username: user.firstName || user.email,
+          // });
         } catch (error) {
           console.error(error)
 

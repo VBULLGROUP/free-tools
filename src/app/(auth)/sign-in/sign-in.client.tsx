@@ -188,13 +188,6 @@ const SignInPage = () => {
         </Form>
       </div>
 
-      <div className="mt-6">
-        <p className="text-center text-sm text-muted-foreground">
-          <Link href="/forgot-password" className="font-medium text-primary hover:text-primary/90">
-            Forgot your password?
-          </Link>
-        </p>
-      </div>
     </div>
   );
 };

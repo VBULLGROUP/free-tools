@@ -48,11 +48,6 @@ const sidebarNavItems: SidebarNavItem[] = [
     href: "/settings/sessions",
     icon: Smartphone,
   },
-  {
-    title: "Change Password",
-    href: "/forgot-password",
-    icon: Lock,
-  },
 ];
 
 export function SettingsSidebar() {

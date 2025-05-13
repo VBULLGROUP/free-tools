@@ -14,7 +14,7 @@ import { withRateLimit, RATE_LIMITS } from "@/utils/with-rate-limit";
 import { getIP } from "@/utils/get-IP";
 import { getCloudflareContext } from "@opennextjs/cloudflare";
 import { getVerificationTokenKey } from "@/utils/auth-utils";
-import { sendVerificationEmail } from "@/utils/email";
+// import { sendVerificationEmail } from "@/utils/email";
 import { EMAIL_VERIFICATION_TOKEN_EXPIRATION_SECONDS } from "@/constants";
 import { passkeyEmailSchema } from "@/schemas/passkey.schema";
 import ms from "ms";
@@ -177,11 +177,11 @@ export const completePasskeyRegistrationAction = createServerAction()
       );
 
       // Send verification email
-      await sendVerificationEmail({
-        email: user.email,
-        verificationToken,
-        username: user.firstName || user.email,
-      });
+      // await sendVerificationEmail({
+      //   email: user.email,
+      //   verificationToken,
+      //   username: user.firstName || user.email,
+      // });
 
       // Create a session
       const sessionToken = generateSessionToken();
