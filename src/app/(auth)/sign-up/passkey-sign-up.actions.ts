@@ -13,7 +13,7 @@ import type { RegistrationResponseJSON, PublicKeyCredentialCreationOptionsJSON }
 import { withRateLimit, RATE_LIMITS } from "@/utils/with-rate-limit";
 import { getIP } from "@/utils/get-IP";
 import { getCloudflareContext } from "@opennextjs/cloudflare";
-import { getVerificationTokenKey } from "@/utils/auth-utils";
+// import { getVerificationTokenKey } from "@/utils/auth-utils";
 // import { sendVerificationEmail } from "@/utils/email";
 import { EMAIL_VERIFICATION_TOKEN_EXPIRATION_SECONDS } from "@/constants";
 import { passkeyEmailSchema } from "@/schemas/passkey.schema";
@@ -160,21 +160,21 @@ export const completePasskeyRegistrationAction = createServerAction()
       }
 
       // Generate verification token
-      const { env } = getCloudflareContext();
-      const verificationToken = createId();
-      const expiresAt = new Date(Date.now() + EMAIL_VERIFICATION_TOKEN_EXPIRATION_SECONDS * 1000);
+      // const { env } = getCloudflareContext();
+      // const verificationToken = createId();
+      // const expiresAt = new Date(Date.now() + EMAIL_VERIFICATION_TOKEN_EXPIRATION_SECONDS * 1000);
 
       // Save verification token in KV with expiration
-      await env.NEXT_CACHE_WORKERS_KV.put(
-        getVerificationTokenKey(verificationToken),
-        JSON.stringify({
-          userId: user.id,
-          expiresAt: expiresAt.toISOString(),
-        }),
-        {
-          expirationTtl: Math.floor((expiresAt.getTime() - Date.now()) / 1000),
-        }
-      );
+      // await env.NEXT_CACHE_WORKERS_KV.put(
+      //   getVerificationTokenKey(verificationToken),
+      //   JSON.stringify({
+      //     userId: user.id,
+      //     expiresAt: expiresAt.toISOString(),
+      //   }),
+      //   {
+      //     expirationTtl: Math.floor((expiresAt.getTime() - Date.now()) / 1000),
+      //   }
+      // );
 
       // Send verification email
       // await sendVerificationEmail({
