@@ -93,6 +93,7 @@ export const signUpAction = createServerAction()
           const expiresAt = new Date(Date.now() + EMAIL_VERIFICATION_TOKEN_EXPIRATION_SECONDS * 1000);
 
           // Save verification token in KV with expiration
+          // @ts-ignore
           await env.NEXT_CACHE_WORKERS_KV.put(
             getVerificationTokenKey(verificationToken),
             JSON.stringify({

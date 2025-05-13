@@ -61,6 +61,7 @@ export async function checkRateLimit({
   )}`;
 
   // Get the current count from KV
+  // @ts-ignore
   const currentCount = parseInt((await env.NEXT_CACHE_WORKERS_KV.get(windowKey)) || "0");
   const reset = (Math.floor(now / options.windowInSeconds) + 1) * options.windowInSeconds;
 
@@ -74,6 +75,7 @@ export async function checkRateLimit({
   }
 
   // Increment the counter
+  // @ts-ignore
   await env.NEXT_CACHE_WORKERS_KV.put(windowKey, (currentCount + 1).toString(), {
     expirationTtl: options.windowInSeconds,
   });
