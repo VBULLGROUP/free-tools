@@ -50,7 +50,7 @@ jobs:
         run: pnpm run db:migrate:dev
 
       - name: Generate Worker types
-        run: pnpm wrangler types
+        run: pnpm cf-typegen
 
       - name: Deploy
         run: pnpm run deploy
