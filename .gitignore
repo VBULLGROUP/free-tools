@@ -11,7 +11,6 @@ node_modules
 
 # next.js
 .next
-.react-email
 out
 
 # production

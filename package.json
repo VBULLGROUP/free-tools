@@ -16,8 +16,7 @@
     "db:generate": "drizzle-kit generate --name",
     "db:migrate:dev": "wrangler d1 migrations apply $(node scripts/get-db-name.mjs) --local",
     "d1:cache:clean": "wrangler d1 execute $(node scripts/get-db-name.mjs) --command \"DELETE FROM tags; DELETE FROM revalidations\" --remote",
-    "d1:cache:seed": "wrangler d1 execute $(node scripts/get-db-name.mjs) --file .open-next/cloudflare/cache-assets-manifest.sql --remote",
-    "email:dev": "email dev -d src/react-email -p 3001"
+    "d1:cache:seed": "wrangler d1 execute $(node scripts/get-db-name.mjs) --file .open-next/cloudflare/cache-assets-manifest.sql --remote"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
@@ -38,8 +37,6 @@
     "@radix-ui/react-separator": "^1.1.2",
     "@radix-ui/react-slot": "^1.1.2",
     "@radix-ui/react-tooltip": "^1.1.8",
-    "@react-email/components": "0.0.32",
-    "@react-email/render": "1.0.4",
     "@simplewebauthn/browser": "^13.1.0",
     "@simplewebauthn/server": "^13.1.1",
     "@stripe/react-stripe-js": "^3.5.1",
@@ -88,7 +85,6 @@
     "eslint": "^9",
     "eslint-config-next": "15.2.3",
     "postcss": "^8",
-    "react-email": "3.0.6",
     "tailwindcss": "^3.4.1",
     "typescript": "^5",
     "wrangler": "^4.4.0"

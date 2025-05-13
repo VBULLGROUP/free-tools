@@ -48,7 +48,7 @@ export function Footer() {
               <h3 className="text-sm font-semibold text-foreground text-center md:text-left">Social</h3>
               <div className="flex items-center space-x-4">
                 <a
-                  href="https://github.com/LubomirGeorgiev"
+                  href=""
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-foreground"
@@ -57,7 +57,7 @@ export function Footer() {
                   <span className="sr-only">GitHub</span>
                 </a>
                 <a
-                  href="https://x.com/LubomirGeorg"
+                  href=""
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-foreground"
@@ -87,13 +87,13 @@ export function Footer() {
                   <ThemeSwitch />
 
                   <a
-                    href="https://startupstudio.dev"
+                    href=""
                     target="_blank"
                     className="flex items-center font-medium text-sm hover:text-foreground transition-colors"
                   >
                     <span className="whitespace-nowrap">Built by</span>
                     <StartupStudioLogo className="h-7 w-7 mx-1.5" />
-                    <span className="whitespace-nowrap">startupstudio.dev</span>
+                    <span className="whitespace-nowrap">SiteHub</span>
                   </a>
                 </div>
               </div>

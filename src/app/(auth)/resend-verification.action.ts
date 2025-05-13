@@ -5,7 +5,6 @@ import { getSessionFromCookie } from "@/utils/auth";
 import { createId } from "@paralleldrive/cuid2";
 import { getCloudflareContext } from "@opennextjs/cloudflare";
 import { getVerificationTokenKey } from "@/utils/auth-utils";
-import { sendVerificationEmail } from "@/utils/email";
 import { withRateLimit, RATE_LIMITS } from "@/utils/with-rate-limit";
 import { EMAIL_VERIFICATION_TOKEN_EXPIRATION_SECONDS } from "@/constants";
 import { z } from "zod";
@@ -49,12 +48,6 @@ export const resendVerificationAction = createServerAction()
           }
         );
 
-        // Send verification email
-        await sendVerificationEmail({
-          email: session.user.email!,
-          verificationToken,
-          username: session.user.firstName || session.user.email!,
-        });
 
         return { success: true };
       },
